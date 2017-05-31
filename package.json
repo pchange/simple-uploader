@@ -23,7 +23,7 @@
     "grunt-contrib-watch": "0.x",
     "grunt-contrib-coffee": "0.x",
     "grunt-contrib-jasmine": "0.x",
-    "grunt-umd": "2.2.1",
+    "grunt-umd": "2.x",
     "grunt-express": "1.4.0",
     "express": "~3.3.4"
   }
