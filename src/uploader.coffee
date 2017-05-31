@@ -160,7 +160,7 @@ class Uploader extends SimpleModule
   @locale: 'zh-CN'
 
 
-uploader = (opts) ->
+simpleUploader = (opts) ->
   new Uploader(opts)
 
 

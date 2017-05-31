@@ -11,7 +11,7 @@
     module.exports = factory({{{cjsDependencies.wrapped}}});
   } else {
     root.simple = root.simple || {};
-    {{#if globalAlias}}root.simple['{{{globalAlias}}}'] = {{else}}{{#if objectToExport}}root['{{{objectToExport}}}'] = {{/if}}{{/if}}factory({{{globalDependencies.normal}}});
+    {{#if globalAlias}}root['{{{globalAlias}}}'] = {{else}}{{#if objectToExport}}root['{{{objectToExport}}}'] = {{/if}}{{/if}}factory({{{globalDependencies.normal}}});
   }
 }(this, function ({{dependencies}}) {
 
