@@ -18,8 +18,8 @@ module.exports = (grunt) ->
         src: 'lib/uploader.js'
         template: 'umd.hbs'
         amdModuleId: 'simple-uploader'
-        objectToExport: 'uploader'
-        globalAlias: 'uploader'
+        objectToExport: 'simpleUploader'
+        globalAlias: 'simpleUploader'
         deps:
           'default': ['$', 'SimpleModule']
           amd: ['jquery', 'simple-module']

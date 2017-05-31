@@ -65,14 +65,20 @@ class Uploader extends SimpleModule
     @uploading = true
 
   getFile: (fileObj) ->
+    window.console.log('getFile entry')
     if fileObj instanceof window.File or fileObj instanceof window.Blob
       name = fileObj.fileName ? fileObj.name
     else
       return null
 
+    window.console.log('getFile run')
+    if $.isFunction @opts.params
+      window.console.log('getFile @opts.params()')
+      @opts.params()
+
     id: @generateId()
     url: @opts.url
-    params: @opts.params
+    params: if $.isFunction @opts.params then @opts.params() else @opts.params
     fileKey: @opts.fileKey
     name: name
     size: fileObj.fileSize ? fileObj.size
